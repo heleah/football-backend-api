@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const playerSchema = new mongoose.Schema({
   name: String,
   price: Number,
-  isFree: Boolean,
+  freeTransfer: Boolean,
   club: String,
   position: String,
   skills: Array,

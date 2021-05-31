@@ -22,7 +22,7 @@ function postPlayer(req, res) {
   const newPlayer = new Player({
     name: req.body.name,
     price: req.body.price,
-    isFree: req.body.isFree,
+    freeTransfer: req.body.freeTransfer,
     club: req.body.club,
     position: req.body.position,
     skills: req.body.skills,
@@ -58,6 +58,7 @@ function deletePlayer(req, res) {
     res.json({
       success: true,
       message: `Player ${doc.name} has been deleted`,
+      data: doc,
     });
   });
 }
